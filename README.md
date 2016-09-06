@@ -2,7 +2,7 @@
 In today's fast-paced, sugar-crazy world, your box of cookies is in greater danger than ever before. This is why I made CooKeep-An application that uses the Walabot in order to detect people who get too close to your cookies and plays an alarm.
 
 
-===Instructions===
+##Instructions
 
 1. Install Walabot's SDK.
 2. Install simpleaudio (used for audio playback)
