@@ -7,7 +7,7 @@ from imp import load_source # used to load the walabot library
 from datetime import datetime, timedelta # used to the current time
 from math import sin, cos, radians, sqrt # used to calculate MAX_Y_VALUE
 import simpleaudio
-wavpath=r'alarm.wav' #The path to the alarm sound
+WAVPATH=r'alarm.wav' #The path to the alarm sound
 R_MIN, R_MAX, R_RES = 10, 60, 2 # walabot SetArenaR parameters
 THETA_MIN, THETA_MAX, THETA_RES = -10, 10, 10 # walabot SetArenaTheta parameters
 PHI_MIN, PHI_MAX, PHI_RES = -10, 10, 2 # walabot SetArenaPhi parametes
@@ -16,7 +16,7 @@ MAX_Y_VALUE = R_MAX * cos(radians(THETA_MAX)) * sin(radians(PHI_MAX))
 SENSITIVITY = 0 # amount of seconds to wait after a move has been detected
 TENDENCY_LOWER_BOUND = 0.1 # tendency below that won't count as entrance/exit
 IGNORED_LENGTH = 3 # len in cm to ignore targets in center of arena (each side)
-
+APPROVEDDISTANCE=200 #the minimal distance from the cookies that people could be in
 def initWalabot():
     """ Load and initialize the Walabot SDK. A cross platform function.
         Returns:
@@ -118,7 +118,7 @@ def CooKeep():
     try:
         while True:
             dataList = getDataList()
-            if min(dataList)<200:
+            if min(dataList)<APPROVEDDISTANCE:
                 print("Do not touch the cookies!!!!!!!")
                 alarm=simpleaudio.WaveObject.from_wave_file(r'c:\Users\user\Desktop\Loud-alarm-clock-sound.wav')
                 playobj=alarm.play()
@@ -129,3 +129,4 @@ def CooKeep():
 
 if __name__ == '__main__':
     CooKeep()
+
