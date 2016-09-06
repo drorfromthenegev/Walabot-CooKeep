@@ -3,6 +3,7 @@ In today's fast-paced, sugar-crazy world, your box of cookies is in greater dang
 
 
 ===Instructions===
+
 1. Install Walabot's SDK.
 2. Install simpleaudio (used for audio playback)
 3. Change the "WAVPATH" variable to the path of the WAV file you want to use for the alarm.
