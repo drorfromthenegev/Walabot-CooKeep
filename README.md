@@ -8,7 +8,7 @@ In today's fast-paced, sugar-crazy world, your box of cookies is in greater dang
 2. Install simpleaudio (used for audio playback)
 3. Change the "WAVPATH" variable to the path of the WAV file you want to use for the alarm.
 4. Change the APPROVEDDISTANCE parameter according to the minimal distance you want people to keep from your cookies.
-5. Put the Walabot vertically to the cookies (facing you) and connect it to the computer.
+5. Put the Walabot vertically (facing you) and connect it to the computer.
 6. Run the code.
 7. Enjoy the cookies you saved from vicious cookie thieves!
 
